@@ -17,4 +17,5 @@ testpython is actually the login, **CHANGE IT ASAP**
 - https://docs.python.org/3/library/hashlib.html
 - https://docs.djangoproject.com/fr/5.0/intro/tutorial01/
 
-test git
+# GITHUB ISSUES ?
+- https://stackoverflow.com/questions/how-can-i-fix-the-git-error-object-file-is-empty
