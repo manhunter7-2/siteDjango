@@ -13,7 +13,7 @@
 ## testpython
 testpython is actually the login, **CHANGE IT ASAP**
 
-# 4 HELP
+# FOR HELP
 - https://docs.python.org/3/library/hashlib.html
 - https://docs.djangoproject.com/fr/5.0/intro/tutorial01/
 
