@@ -2,6 +2,7 @@
 
 # TODO
 - set db params on .env file (cf. https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8)
+- take off CSRF exemption on login/views/register
 
 - params to gitignore : 
 - /env
@@ -19,3 +20,7 @@ testpython is actually the login, **CHANGE IT ASAP**
 
 # GITHUB ISSUES ?
 - https://stackoverflow.com/questions/how-can-i-fix-the-git-error-object-file-is-empty
+
+# REQUESTS
+## GET
+- request.GET.get('request', '')

@@ -1,5 +1,4 @@
 from django.db import models
-import hashlib as hash
 
 # Create your models here.
 class login(models.Model):
