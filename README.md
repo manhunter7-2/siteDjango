@@ -1,7 +1,6 @@
 # siteDjango
 
 # TODO
-- set db params on .env file (cf. https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8)
 - take off CSRF exemption on login/views/register
 
 - params to gitignore : 
@@ -12,7 +11,6 @@
 
 # ENTITIES
 ## testpython
-testpython is actually the login, **CHANGE IT ASAP**
 
 # FOR HELP
 - https://docs.python.org/3/library/hashlib.html
@@ -21,6 +19,9 @@ testpython is actually the login, **CHANGE IT ASAP**
 # GITHUB ISSUES ?
 - https://stackoverflow.com/questions/how-can-i-fix-the-git-error-object-file-is-empty
 
-# REQUESTS
+# TROUBLESHOOTING
 ## GET
 - request.GET.get('request', '')
+
+## IMPORT CUSTOM OBJECTS
+- from <module>.models import <className>
