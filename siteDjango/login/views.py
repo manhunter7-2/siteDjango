@@ -5,6 +5,7 @@ import environ
 import json
 from django.views.decorators.csrf import csrf_exempt
 from login.models import Login
+from customExceptions.views import setExc as setExc
 
 #from siteDjango.login.models import login
 
@@ -15,10 +16,12 @@ environ.Env.read_env()
 
 # Create your views here.
 #@api_view(['GET'])
+"""
 def index(request):
     pwd = request.GET.get('request', '')
     salt = env("LOGIN_SALT")
     return HttpResponse(hash.sha256((pwd+salt).encode("utf-8")).hexdigest())
+"""
 
 def encodePwd(pwd):
     pwd=str(pwd)
@@ -34,8 +37,11 @@ def register(request):
     login = Login
     login.pwd = encodePwd(str(json_data['pwd']))
     print(login.pwd)
+
+    """"
     if ((login.objects.filter(nickname=json_data['nickname'], email=json_data['email'])).count() == 0):
-        exists = "No"
+        login.exception = setExc(1002)
     else:
         exists = "Yes"
     return HttpResponse(json_data['param']+" "+exists+"\n"+str(login.pwd))
+    """
