@@ -45,3 +45,19 @@ def register(request):
         exists = "Yes"
     return HttpResponse(json_data['param']+" "+exists+"\n"+str(login.pwd))
     """
+#@api_view(['POST'])
+@csrf_exempt
+def login(request):
+    json_data=json.loads(request.body)
+    login = Login
+    login.nickname = json_data.nickname
+    login.pwd = json_data.pwd
+    matching = login.objects.filter(nickname=login.nickname)
+    if (matching.count == 0):
+        print("This account does not exist")
+    else:
+        if (encodePwd(str(login.pwd) == matching[1].pwd)):
+            print("OK !")
+        else:
+            print ("Not OK !")
+    return HttpResponse("End")
