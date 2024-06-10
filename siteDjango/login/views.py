@@ -5,7 +5,6 @@ import environ
 import json
 from django.views.decorators.csrf import csrf_exempt
 from login.models import Login
-from customExceptions.views import setExc as setExc
 
 #from siteDjango.login.models import login
 
@@ -26,7 +25,7 @@ def index(request):
 def encodePwd(pwd):
     pwd=str(pwd)
     salt = env("LOGIN_SALT")
-    return hash.sha256((pwd+salt).encode("utf-8")).hexdigest()
+    return hash.sha256((pwd+salt).encode("unicode")).hexdigest()
 
 #@api_view(['POST'])
 #----- DELETE THIS ASAP -----
